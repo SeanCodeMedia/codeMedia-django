@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+
+
+{% block content %}
+
+<style type="text/css">
+	.card-img-top{
+
+		width:80% !important; 
+		margin-top:1em !important;
+	}
+
+	.col-sm{
+		max-width:30% !important;
+	}
+
+
+</style>
+
+
+
+<div class="container top-margin" >
+	<div class="row">
+	{%for blog in BlogPost %}
+		<div class="col-sm">
+			<div class="card" style="width: 18rem;">
+				<center><img class="card-img-top" width="286" height="214" src="{{blog.coverImage.url}}" alt="Card image cap"></center>
+				<div class="card-body">
+					<h5 class="card-title">{{ blog.title }}</h5>
+					<p class="card-text">{{ blog.overview}}</p>
+					<a href="blogpost/{{forloop.counter}}/" class="btn btn-primary">Start Reading</a>
+				</div>
+			</div>
+		</div>
+	 {%endfor%}
+	</div>
+</div>
+
+
+{%endblock content%} 

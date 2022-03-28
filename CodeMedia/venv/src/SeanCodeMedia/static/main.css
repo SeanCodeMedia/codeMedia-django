@@ -1,0 +1,75 @@
+
+
+#languages{
+
+/*	 margin-top:10%;*/
+}
+
+#image1{
+
+	 width:200px;
+   height:200px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/python.png");
+}
+
+
+#image2{
+
+	 width:106px;
+   height:200px;
+   background-repeat:no-repeat;
+   background-size:cover!important;
+   background-position: center;
+   background:url("images/java.png");
+}
+
+
+#image3{
+
+	 width:100px;
+   height:100px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/lua.png");
+}
+
+#image4{
+
+	 width:100px;
+   height:100px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/node.png");
+}
+
+
+#image5{
+
+	 width:100px;
+   height:100px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/php.png");
+}
+
+
+#image6{
+
+	 width:128px;
+   height:163px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/flutter.png");
+}
+
+
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
