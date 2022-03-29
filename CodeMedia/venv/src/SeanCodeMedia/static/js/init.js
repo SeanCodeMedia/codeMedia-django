@@ -684,6 +684,17 @@ function aali_tm_moving_animation(){
 // -----------------    TILT    ------------------------
 // -----------------------------------------------------
 
+function tiltEffect() {
+
+jQuery('.tilt-effect').tilt({
+    maxTilt: 6,
+	easing: "cubic-bezier(.03,.98,.52,.99)",
+	speed: 500,
+	transition: true
+})
+
+}
+
 jQuery('.tilt-effect').tilt({
     maxTilt: 6,
 	easing: "cubic-bezier(.03,.98,.52,.99)",

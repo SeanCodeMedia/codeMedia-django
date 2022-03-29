@@ -1,96 +1,75 @@
 
-html body{
-	margin: 0;
-  height: 100%;
-	background-color:#8C8C8C !important; 
-	overflow-y: scroll; /* Add the ability to scroll */
+
+#languages{
+
+/*	 margin-top:10%;*/
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-html body::-webkit-scrollbar {
-    display: none;
-}
+#image1{
 
-/* Hide scrollbar for IE, Edge and Firefox */
-html body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-
-#containerOne{
-  width:100%;
-  height:100%;
-  background-color:#C0C0C0 !important; 
-
-}
-
-#containerTwo{
-  width:100%;
-  height:100%;
-  background-color:#000080 !important; 
+	 width:200px;
+   height:200px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/python.png");
 }
 
 
-#canvas{
+#image2{
 
-	width:100%;
-	height:100%;
-	display: block;
+	 width:106px;
+   height:200px;
+   background-repeat:no-repeat;
+   background-size:cover!important;
+   background-position: center;
+   background:url("images/java.png");
 }
 
-.navbar{
-  width:100%;
-	position: fixed;
+
+#image3{
+
+	 width:100px;
+   height:100px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/lua.png");
+}
+
+#image4{
+
+	 width:100px;
+   height:100px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/node.png");
 }
 
 
-.navbar-light .navbar-brand {
+#image5{
 
-	  color: #FFFFFF !important;
+	 width:100px;
+   height:100px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/php.png");
 }
 
-.nav-link{
-  color: #FFFFFF !important;
+
+#image6{
+
+	 width:128px;
+   height:163px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:cover!important;
+   background:url("images/flutter.png");
 }
 
-.bg-light{
-   
- 
-   background-color:#000 !important ; 
 
-}
 
-.top-margin{
-  margin-top: 2em!important; 
-  min-height: 100vh!important;
-}
-.navbar-nav .nav-link{
-
-	padding-right: 2rem !important;
-	padding-left: 2rem !important;
-}
-
-.navbar-brand{
-	margin-right:5rem;
-}
-
-.nav-style{
-
-	color:#FFFFFF!important;
-	text-decoration: none !important;
-
-}
-
-.footer{
-	   width: auto; 
-	   height: 100px;
-	   color: rgb(255,255,255);
-	   margin-top: 2em!important; 
-	   background-color:#000 !important ; 
-}
-
-.col-padding{
-    padding-top:1em;
-	padding-bottom:1em; 
-}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }

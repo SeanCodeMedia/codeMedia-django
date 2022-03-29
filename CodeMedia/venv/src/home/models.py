@@ -18,6 +18,7 @@ class Home(models.Model):
 	main_photo_3		= models.ImageField(upload_to="uploads/home/homephotos", default="")
 	about_me			= RichTextUploadingField(blank=True,null=True)
 	skill_description 	= RichTextUploadingField(blank=True,null=True)
+	about_youtube	 	= RichTextUploadingField(blank=True,null=True)
 
 	# icon2		 		= models.ImageField(upload_to="uploads/profile/project_photos", default="")
 	# icon3		 		= models.ImageField(upload_to="uploads/profile/project_photos", default="")

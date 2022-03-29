@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'tutorials',
      'portfolio',
      'ckeditor',
+     'videos',
      'ckeditor_uploader',
      'admin_interface',
      'colorfield',
