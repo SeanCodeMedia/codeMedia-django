@@ -1,0 +1,1 @@
+mysqlsh -u doadmin -p -h codemedia-db-do-user-866838-0.b.db.ondigitalocean.com -P 25060 -D CodeMediaDB --sql

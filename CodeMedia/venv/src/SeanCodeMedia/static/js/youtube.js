@@ -104,6 +104,7 @@ function buildVideos(range){
                                 <div class="service_hidden_details">\
                                     <div class="service_popup_informations">\
                                        <iframe width="800px" height="400px" src="https://www.youtube.com/embed/'+getVideoID(i)+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\
+                                          <h3>Description</h3>\
                                          <p>\
                                              '+getDescription(i)+'\
                                            </p>\
@@ -134,6 +135,7 @@ function buildVideos(range){
                                     <div class="service_popup_informations">\
                                      <iframe width="800px" height="400px" src="https://www.youtube.com/embed/'+getVideoID(i)+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\
                                         <div class="description">\
+                                           <h3>Description</h3>\
                                            <p>\
                                              '+getDescription(i)+'\
                                            </p>\
@@ -185,7 +187,6 @@ function getDescription(index){
 function getThumbnail(index){
       // images size is 480 x 360
       thumbnail = youtubeData.items[index].snippet.thumbnails.high.url
-      console.log(youtubeData.items[index].snippet.thumbnails)
       return thumbnail
 }
 

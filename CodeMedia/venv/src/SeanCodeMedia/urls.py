@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib    import admin
 from django.urls       import path, include
 from home.views        import index
-from tutorials.views   import show_tutorials
-from tutorials.views   import show_articles
-from tutorials.views   import  show_blog_post
+from blog.views   import show_tutorials
+from blog.views   import show_articles
+from blog.views   import  show_blog_post
 from portfolio.views   import show_portfolio
 from portfolio.views   import show_project
 from ckeditor_uploader import urls

@@ -39,13 +39,14 @@ INSTALLED_APPS = [
     #My apps 
     'home',
     'SeanCodeMedia',
-    'tutorials',
+     'blog',
      'portfolio',
      'ckeditor',
      'videos',
      'ckeditor_uploader',
      'admin_interface',
      'colorfield',
+     'templatetags',
 
 
     # Django apps 
