@@ -4,6 +4,8 @@
 
 {% block content %}
 
+{%include 'snippets/navbar.html'%}
+
 <style type="text/css">
 	.card-img-top{
 
@@ -19,8 +21,48 @@
 </style>
 
 
+<div class="aali_tm_all_wrap top-padding" data-magic-cursor="show"> 
 
-<div class="container top-margin" >
+<!-- PORTFOLIO -->
+
+    <div class="aali_tm_section help" id="portfolio">
+        <div class="aali_tm_portfolio wow fadeInUp" data-wow-duration="1s">
+            <div class="container">
+         
+                <div class="portfolio_list">
+                    <ul class="gallery_zoom">
+                        {%for blog in BlogPost %}
+                        <li class="detail">
+                            <div class="list_inner">
+                                <div class="image">
+                                    {%load static%}
+                                    <img src="{%static "./images/thumbs/1-1.jpg" %}" alt="" />
+                                    <div class="main" data-img-url=
+                                    "{{ blog.main_coverImage.url}}"></div>
+                                </div>
+                                <div class="overlay"></div>
+                                 {%load static%}
+                                <img class="svg" 
+                                src="{%static "./images/svg/text.svg" %}" alt="" />
+                                <div class="details">
+                                    <!-- <span>Tutorials on</span> -->
+                                    <h3>{{ blog.title }}</h3>
+                                    <p>{{ blog.overview}}</p>
+                                </div>
+                                <a class="aali_tm_full_link" href="/tutorials/articles/{{blog.category.id}}/blogpost/{{forloop.counter}}"></a>
+                            </div>
+                        </li>
+                        {%endfor%}
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /PORTFOLIO -->
+</div>
+<!-- <div class="container top-margin" >
 	<div class="row">
 	{%for blog in BlogPost %}
 		<div class="col-sm">
@@ -36,6 +78,6 @@
 	 {%endfor%}
 	</div>
 </div>
-
+ -->
 
 {%endblock content%} 

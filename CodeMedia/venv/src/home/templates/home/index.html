@@ -5,7 +5,8 @@
 {%for home in Home%}
 {%load static%}
 <script type="text/javascript" src="{%static "./js/youtube.js" %}"></script>
-
+<!-- /SCRIPTS -->
+<title>Home</title>
 <!-- PRELOADER -->
     <div id="preloader">
         <div class="loader_line"></div>
@@ -33,7 +34,8 @@
         <div class="mobile_menu_inner">
             <div class="mobile_in">
                 <div class="logo">
-                    <a href="#"><img src="img/logo/dark.png" alt="" /></a>
+                      <h3>Sean Code Media</h3>
+                   <!--  <a href="#"><img src="img/logo/dark.png" alt="" /></a> -->
                 </div>
                 <div class="trigger">
                     <div class="hamburger hamburger--slider">
@@ -803,55 +805,7 @@
     </div>
     <!-- /CONTACT -->
     
-    <!-- COPYRIGHT -->
-    <div class="aali_tm_section">
-        <div class="aali_tm_copyright">
-            <div class="container">
-                <div class="copyright_inner">
-                    <div class="top">
-                        <div class="logo">
-                            <img src="img/logo/logo.png" alt="" />
-                        </div>
-                        <div class="social">
-                            <span>Connect</span>
-                            <ul>
-                                <li><a href="#"><i class="icon-facebook-1"></i></a></li>
-                                <li><a href="#"><i class="icon-twitter-1"></i></a></li>
-                                <li><a href="#"><i class="icon-instagram-3"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="bottom">
-                        <div class="left">
-                            <p>Designed with love by <a class="line_anim" href="https://themeforest.net/user/marketify" target="_blank">Marketify</a> &copy; 2021</p>
-                        </div>
-                        <div class="right">
-                            <ul>
-                                <li><a class="line_anim" href="#">Terms &amp; Condition</a></li>
-                                <li><a class="line_anim" href="#">Privacy Policy</a></li>
-                                <li><a class="line_anim" href="#">Support</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <span class="border moving_effect" data-direction="y" data-reverse="yes"></span>
-                </div>
-            </div>
-            <span class="square moving_effect" data-direction="x">
-                <a class="totop" href="#">
-                    <img class="svg one" src="img/svg/arrow-top.svg" alt="" />
-                    <img class="svg two" src="img/svg/arrow-top.svg" alt="" />
-                </a>
-            </span>
-        </div>
-    </div>
-    <!-- /COPYRIGHT -->
-    
-    <!-- MAGIC CURSOR -->
-    <div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
-    <!-- /MAGIC CURSOR -->
-    
-</div>
+
 <!-- / WRAPPER ALL -->
 {%endfor%}
 {% endblock content %}

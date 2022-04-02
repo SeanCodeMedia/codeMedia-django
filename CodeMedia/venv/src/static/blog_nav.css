@@ -6854,7 +6854,7 @@ textarea.form-control-lg {
 }
 
 .border-top {
-  border-top: 1px solid #dee2e6 !important;
+  border-top: 1px solid #3F3F3F !important;
 }
 
 .border-top-0 {
@@ -6862,7 +6862,7 @@ textarea.form-control-lg {
 }
 
 .border-end {
-  border-right: 1px solid #dee2e6 !important;
+  border-right: 1px solid #3F3F3F !important;
 }
 
 .border-end-0 {
@@ -6870,7 +6870,7 @@ textarea.form-control-lg {
 }
 
 .border-bottom {
-  border-bottom: 1px solid #dee2e6 !important;
+  border-bottom: 1px solid #3F3F3F !important;
 }
 
 .border-bottom-0 {
@@ -11309,10 +11309,10 @@ textarea.form-control-lg {
   min-width: 100vw;
 }
 
-/*body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   margin-left: 0;
 }
-*/
+
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;
@@ -11323,7 +11323,7 @@ textarea.form-control-lg {
     width: 100%;
   }
 
-/*  body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-    margin-left: -15rem;
-  }*/
+  body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+    margin-left: -40rem;
+  }
 }

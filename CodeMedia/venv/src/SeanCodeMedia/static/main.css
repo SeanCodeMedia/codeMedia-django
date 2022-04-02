@@ -108,12 +108,6 @@
     position: relative !important;
 }
 
-.button{
-
-   background-color:#ea4343;
-}
-
-
 .btn-primary {
   color: #fff;
   background-color: #ea4343;
@@ -180,11 +174,17 @@
 
      width:20%;
      min-height:100vh;
+     margin-top:100px;
     /* background-color: black;*/
      float: right;
    /*  border-right: solid;
      border-color:black;*/
      position: relative;
+}
+
+
+.border-end {
+    border-right: 1px solid #040404  !important;
 }
 
 iframe .ace_content{
@@ -206,3 +206,12 @@ iframe .ace_content{
      color:#FFFF;
 
 }
+
+
+.top-padding{
+
+     margin-top:35%;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
