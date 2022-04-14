@@ -40,6 +40,8 @@ DEVELOPMENT_MODE = os.environ.get("DEVELOPMENT_MODE", "False") == "True"
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+DISABLE_COLLECTSTATIC=1
+
 import mimetypes
 mimetypes.add_type("application/javascript", ".js", True)
 mimetypes.add_type("text/css", ".css", True)
