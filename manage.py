@@ -8,7 +8,10 @@ def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SeanCodeMedia.settings')
     try:
-        dotenv.read_dotenv()
+        if os.path.exists(".env"):
+            dotenv.read_dotenv()
+        else: 
+            print("WARNING .env does exist ")
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
