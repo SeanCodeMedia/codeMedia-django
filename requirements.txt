@@ -19,5 +19,3 @@ six==1.15.0
 sqlparse==0.4.1
 typing-extensions==4.1.1
 django-dotenv==1.4.2
-whitenoise==6.0.0
-django-heroku==0.3.1

@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from django.core.management.utils import get_random_secret_key
 from pathlib import Path
-import django_heroku
 #EMAIL 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'boxingstudiogames237@gmail.com'
@@ -75,7 +74,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -200,5 +198,3 @@ CKEDITOR_CONFIGS = {
 
    },
 }
-
-django_heroku.settings(locals())
