@@ -1,0 +1,816 @@
+
+{% extends 'base.html'%}
+
+{% block content %}
+{%for home in Home%}
+{%load static%}
+<script type="text/javascript" src="{%static "./js/youtube.js" %}"></script>
+<script type="text/javascript">
+  var homePageVideo = new YouTubeLayout(); 
+</script>
+<script type="text/javascript" src="{%static "./js/scroll.js" %}"></script>
+<!-- /SCRIPTS -->
+<title>Home</title>
+<!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader_line"></div>
+    </div>
+<!-- /PRELOADER -->
+
+<!-- WRAPPER ALL -->
+<div class="aali_tm_all_wrap" data-magic-cursor="show"> 
+    
+    <!-- MODALBOX -->
+    <div class="aali_tm_modalbox">
+        <div class="box_inner">
+            <div class="close">
+                 {%load static%}
+                <a href="#"><img class="svg" 
+                    src="{%static "./images/svg/cancel.svg" %}"alt="" /></a>
+            </div>
+            <div class="description_wrap"></div>
+        </div>
+    </div>
+    <!-- /MODALBOX -->
+    
+    <!-- MOBILE MENU -->
+    <div class="aali_tm_mobile_menu">
+        <div class="mobile_menu_inner">
+            <div class="mobile_in">
+                <div class="logo">
+                      <h3>Sean Code Media</h3>
+                   <!--  <a href="#"><img src="img/logo/dark.png" alt="" /></a> -->
+                </div>
+                <div class="trigger">
+                    <div class="hamburger hamburger--slider">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown_inner">
+                <ul class="anchor_nav">
+                    <li class="current"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#service">Videos</a></li>
+                   <!--  <li><a href="#testimonial">Testimonial</a></li> -->
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /MOBILE MENU -->
+
+    <!-- HEADER -->
+    <div class="aali_tm_header">
+        <div class="container">
+            <div class="inner">
+                <div class="logo">
+                   <h3>Sean Code Media</h3>
+                   <!--  <a href="#"><img src="img/logo/logo.png" alt="" /></a> -->
+                </div>
+                <div class="menu">
+                    <ul class="anchor_nav">
+                        <li class="current"><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#service">Videos</a></li>
+                       <!--  <li><a href="#testimonial">Testimonial</a></li> -->
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /HEADER -->
+    
+    <!-- HERO -->
+    <div class="aali_tm_section" id="home">
+        <div class="aali_tm_hero">
+            <div class="container">
+                <div class="hero_inner">
+                    <div class="content">
+                        <span class="hello">Hello, I'm</span>
+                        <h3 class="name">Sean</h3>
+                        <div class="job">
+                            <span class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
+                                <span class="blc"></span>
+                                <span class="cd-words-wrapper">
+                                  <b class="is-visible">Blogger</b>
+                                  <b>Developer</b>
+                                  <b>Application Engineer</b>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="hero_buttons">
+                            <div class="aali_tm_button">
+                                <a class="anchor" href="#contact"><span>Contact me
+                                    {%load static%}
+                                    <img class="svg" src="{%static "./images/svg/message.svg" %}" alt="" /></span></a>
+                            </div>
+                            <div class="simple_button">
+                                <a class="anchor" href="#about">About Me</a>
+                            </div>
+                        </div>
+                        <div class="aali_tm_down">
+                            <div class="down-icon white top_120">
+                                <a class="anchor" href="#about">
+                                    <svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                                        <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+                                        <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="avatar parallax" data-relative-input="true">
+                       
+                        <div class="main">
+                               {%load static%}
+                            <img src="{{home.main_photo.url}}"
+                             alt="{%static "./images/sean1.png" %}" class="layer" data-depth="0.1" />
+                        </div>
+                        <span class="one"><span class="in layer" data-depth="0.14"></span></span>
+                        <span class="two"><span class="in layer" data-depth="0.18"></span></span>
+                        <span class="three"><span class="in layer" data-depth="0.22"></span></span>
+                        <span class="four"><span class="in layer" data-depth="0.26"></span></span>
+                        <span class="five"><span class="in layer" data-depth="0.3"></span></span>
+                        <h3 class="stroke_text"><span class="">Sean</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="socials">
+                <ul>
+                    
+                    <li><a href="{{home.facebook}}">
+                        {%load static%}
+                        <img class="svg" src="{%static "./images/svg/social/facebook.svg" %}" alt="" /></a></li>
+                    <li><a href="{{home.youtube}}">
+                         {%load static%}
+                        <img class="svg" src="{%static "./images/svg/social/youtube.svg" %}" alt="" />
+                    </a></li>
+                    <li><a href="{{home.instagram}}">
+                        {%load static%}
+                        <img class="svg" src=  "{%static "./images/svg/social/instagram.svg" %}" alt="" />
+                    </a></li>
+                </ul>
+            </div>
+            <div class="hero_mail">
+                <a class="line_anim" href="#">{{home.email}}</a>
+            </div>
+        </div>
+    </div>
+    <!-- /HERO -->
+    
+    <!-- ABOUT -->
+    <div class="aali_tm_section" id="about">
+        <div class="aali_tm_about">
+            <div class="about_inner">
+                <div class="left">
+                    <div class="image">
+                        {%load static%}
+                        <img src="{%static "./images/thumbs/45-49.jpg" %}" alt="" />
+                        {%load static%}
+                        <div class="main" data-img-url="{{home.main_photo_2.url}}" ></div>
+                        <span class="square moving_effect" data-direction="y" data-reverse="yes"></span>
+                        <span class="border"><span class="in moving_effect" data-direction="x" data-reverse="yes"></span></span>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="title wow fadeInUp" data-wow-duration="1s">
+                        <span class="small">About Me</span>
+                        <h3>I'm <span>Sean</span></h3>
+                        <h3>Application <span> Engineer</span></h3>
+                        <span class="subtitle">Based In New Jersey</span>
+                    </div>
+                    <div class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                        {{home.about_me|safe}}
+                    </div>
+                    <div class="aali_tm_button wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        {%load static%}
+                        <a href="/resume" download><span>Download CV <img class="svg" 
+                            src="{%static "./images/svg/download.svg" %}" alt="" /></span></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="image">
+                         {%load static%}
+                        <img src="{%static "./images/thumbs/41-61.jpg" %}" alt="" />
+                        <div class="main" data-img-url="{{home.main_photo_3.url}}"></div>
+                        <div class="square moving_effect" data-direction="x" data-reverse="no"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /ABOUT -->
+    
+    <!-- SKILLS -->
+    <div class="aali_tm_section">
+        <div class="aali_tm_skills">
+            <div class="container">
+                <div class="skills_inner">
+                    <div class="left wow fadeInLeft" data-wow-duration="1s">
+                        <div class="aali_tm_main_title" data-text-align="left" data-color="light">
+                            <span>My Skills</span>
+                            <h3>A Passion For <br/>Learning</h3>
+                               {{home.skill_description|safe}}
+                        </div>
+                    </div>
+                    <!-- add list of programming languages here !-->
+                    <div class="right wow fadeInRight" data-wow-duration="1s">
+
+                <div id="languages" class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="grow" id="image1"></div>
+                        </div>
+                        <div class="col-sm">
+                          <div class="grow" id="image2"></div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="grow" id="image3"></div>
+                        </div>
+                    </div>
+                      <div class="row">
+                        <div class="col-sm">
+                            <div class="grow" id="image4"></div>
+                        </div>
+                        <div class="col-sm">
+                          <div class="grow" id="image5"></div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="grow" id="image6"></div>
+                        </div>
+                    </div>
+                </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <span class="border moving_effect" data-direction="x" data-reverse="yes"></span>
+        </div>
+    </div>
+    <!-- /SKILLS -->
+    
+    <!-- PORTFOLIO -->
+    <div class="aali_tm_section help" id="portfolio">
+        <div class="aali_tm_portfolio wow fadeInUp" data-wow-duration="1s">
+            <div class="container">
+                <div class="aali_tm_main_title" data-text-align="center" data-color="light">
+                    <span>Selected works</span>
+                    <h3>Check my portfolio</h3>
+                </div>
+                <div class="portfolio_filter">
+                </div>
+                <div class="portfolio_list">
+                    <ul class="gallery_zoom">
+                        {%for Project in project %}
+                        <li class="detail">
+                            <div class="list_inner">
+                                <div class="image">
+                                    {%load static%}
+                                    <img src="{%static "./images/thumbs/1-1.jpg" %}" alt="" />
+                                    <div class="main" data-img-url="{{Project.Icon.url}}"></div>
+                                </div>
+                                <div class="overlay"></div>
+                                 {%load static%}
+                                <img class="svg" 
+                                src="{%static "./images/svg/text.svg" %}" alt="" />
+                                <div class="details">
+                                    <span>Detail</span>
+                                    <h3>{{ Project.title }}</h3>
+                                </div>
+                                <a class="aali_tm_full_link portfolio_popup" href="#"></a>
+
+                                <div class="hidden_content">
+                                    <div class="popup_details">
+                                        <div class="additional_images">
+                                            <ul>
+                                                <li>
+                                                    <div class="list_inner">
+                                                        <div class="my_image">
+
+                                                            <img src= 
+                                                            "{%static "./images/thumbs/4-2.jpg" %}" alt="" />
+
+                                                            <div class="main
+                                                            " data-img-url="{{Project.project_photo1.url}}"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        <div class="main_details">
+                                            <div class="textbox">
+                                                {{Project.description|safe}}
+                                            </div>
+                                            <div class="detailbox">
+                                                <ul>
+                                                    <li>
+                                                        <span class="first">Client</span>
+                                                        <span>Alvaro Morata</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="first">Category</span>
+                                                        <span><a href="#">Detail</a></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="first">Date</span>
+                                                        <span>March 07, 2021</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="first">Share</span>
+                                                        <ul class="share">
+                                                            <li><a href="#">
+                                                                <img class="svg" src="{%static "./images/svg/social/facebook.svg" %}" alt="" /></a></li>
+                                                            <li><a href="#"><img class="svg" src="{%static "./images/svg/social/twitter.svg" %}" alt="" /></a></li>
+                                                            <li><a href="#"><img class="svg" src="{%static "./images/svg/social/instagram.svg" %}" alt="" /></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="additional_images">
+                                            <ul>
+                                                <li>
+                                                    <div class="list_inner">
+                                                        <div class="my_image">
+                                                            <img src= 
+                                                            "{%static "./images/thumbs/4-2.jpg" %}" alt="" />
+                                                            <div class="main
+                                                            " data-img-url="{{Project.project_photo2.url}}"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list_inner">
+                                                        <div class="my_image">
+                                                             <img src= 
+                                                            "{%static "./images/thumbs/4-2.jpg" %}" alt="" />
+                                                            <div class="main
+                                                            " data-img-url="{{Project.project_photo3.url}}"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list_inner">
+                                                        <div class="my_image">
+                                                                  <img src= 
+                                                            "{%static "./images/thumbs/4-2.jpg" %}" alt="" />
+                                                            <div class="main
+                                                            " data-img-url=
+                                                            "{{Project.project_photo4.url}}"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {%endfor%}
+                        </li>
+                        </li>
+                        <li>
+                        <div class="aali_tm_button wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                                            {%load static%}
+                                            <a href="/portfolio"><span>More Projects</span></a>
+                            <li/>                 </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /PORTFOLIO -->
+    
+    <!-- /videos -->
+    <div class="aali_tm_section" id="service">
+        <div class="aali_tm_service">
+            <div class="container">
+                <div class="service_list">
+                    <ul id="youtube_section"> 
+                        <li class="simple wow fadeInLeft" data-wow-duration="1s">
+                            <div class="list_inner">
+                                <div class="aali_tm_main_title" data-text-align="left" data-color="dark">
+                                    <span>Latest Videos</span>
+                                    <h4>My Youtube Channel</h4>
+                                    <p>{{home.about_youtube |safe}}</p>
+                                </div>
+                            </div>
+                        </li>
+                  
+                    </ul>
+                </div>
+            </div>
+            <span class="square_left moving_effect" data-direction="y" data-reverse="yes"></span>
+            <span class="square_right moving_effect" data-direction="y" data-reverse="yes"></span>
+        </div>
+    </div>
+    <!-- /videos -->
+    
+    <!-- RESUME -->
+    <div class="aali_tm_section">
+        <div class="aali_tm_resume">
+            <div class="content">
+                <div class="container">
+                    <div class="resume_in">
+                        <div class="aali_tm_main_title" data-text-align="left" data-color="dark">
+                            <span>Know More</span>
+                            <h3>My Resume</h3>
+                            <p>{{home.about_cv|safe}}</p>
+                        </div>
+                        <div class="content_inner">
+                            <ul>
+                                <li class="wow fadeInLeft" data-wow-duration="1s">
+                                    <h3 class="main_title"><span>Education</span></h3>
+                                    <ul class="list">
+                                        <li>
+                                            <div class="list_inner">
+                                                <span class="icon"><img class="svg" src= "{%static "./images/svg/degree.svg" %}" alt="" /></span>
+                                                <div class="info">
+                                                    <div class="left">
+                                                        <h3>{{home.Degree_3      | safe}}</h3>
+                                                        <span>{{home.Education_3 |safe}}</span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <span>{{home.Year_3 | safe}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>{{home.Degree_3_description | safe}}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list_inner">
+                                                <span class="icon"><img class="svg" src= "{%static "./images/svg/degree.svg" %}" alt="" /></span>
+                                                <div class="info">
+                                                    <div class="left">
+                                                        <h3>{{home.Degree_2      | safe}}</h3>
+                                                        <span>{{home.Education_2 |safe}}</span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <span>{{home.Year_2 | safe}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>{{home.Degree_2_description | safe}}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list_inner">
+                                                <span class="icon"><img class="svg" src= "{%static "./images/svg/degree.svg" %}" alt="" /></span>
+                                                <div class="info">
+                                                    <div class="left">
+                                                        <h3>{{home.Degree_1      | safe}}</h3>
+                                                        <span>{{home.Education_1 |safe}}</span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <span>{{home.Year_1 | safe}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>{{home.Degree_1_description | safe}}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="wow fadeInRight" data-wow-duration="1s">
+                                    <h3 class="main_title"><span>Experience</span></h3>
+                                    <ul class="list">
+                                        <li>
+                                            <div class="list_inner">
+                                                <span class="icon"><img class="svg" src= "{%static "./images/svg/case.svg" %}" alt="" /></span>
+                                                <div class="info">
+                                                    <div class="left">
+                                                        <h3>{{home.role2 | safe}}</h3>
+                                                        <span>{{home.Experience_2 |safe}}</span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <span>{{home.Experience_year_2 |safe}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>{{home.Experience_2_description |safe}}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list_inner">
+                                                <span class="icon"><img class="svg" src= "{%static "./images/svg/case.svg" %}" alt="" /></span>
+                                                <div class="info">
+                                                    <div class="left">
+                                                        <h3>{{home.role1 | safe}}</h3>
+                                                        <span>{{home.Experience_1 |safe}}</span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <span>{{home.Experience_year_1 |safe}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text">
+                                                    <p>{{home.Experience_1_description |safe}}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="aali_tm_button wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                                            {%load static%}
+                                            <a href="/resume" download><span>Download CV <img class="svg" 
+                                                 src="{%static "./images/svg/download.svg" %}" alt="" /></span></a>
+                                             </div>
+                                        </li>
+                                      <!--   <li>
+                                            <div class="list_inner">
+                                                <span class="icon"><img class="svg" src="img/svg/case.svg" alt="" /></span>
+                                                <div class="info">
+                                                    <div class="left">
+                                                        <h3>Accolades</h3>
+                                                        <span>Envato Studio</span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <span>2012 - 2018</span>
+                                                    </div>
+
+                                                </div>
+                                                <div class="text">
+                                                    <p>Aali is a leading web design agency with an award-winning design</p>
+                                                </div>
+                                            </div>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+            <!--
+              <div class="media" data-background-style="video">  Background Styles: "video" and "image" // Also you can use any youtube, vimeo, and local videos 
+                <div class="video jarallax" data-speed="0" data-jarallax-video="https://vimeo.com/337293658"></div>
+                <div class="image jarallax" data-speed="0" data-img-url="img/about/2.jpg"></div>
+                <span class="square moving_effect" data-direction="y" data-reverse="yes"></span>
+            </div>
+        -->
+        </div>
+    </div>
+    <!-- /RESUME -->
+    
+    <!-- TESTIMONIALS -->
+    <!-- <div class="aali_tm_section" id="testimonial">
+        <div class="aali_tm_testimonials">
+            <div class="left">
+                <div class="image">
+                    <img src="img/hero/2.png" alt="" />
+                </div>
+            </div>
+            <div class="right">
+                <div class="right_in">
+                    <div class="aali_tm_main_title" data-text-align="left" data-color="light">
+                        <span>Testimonial</span>
+                        <h3>What People Say</h3>
+                    </div>
+                    <ul class="owl-carousel">
+                        <li class="item">
+                            <div class="text">
+                                <p>I had a problem finding something, asked the support team, got a reply and a solution within a few minutes. Brilliant support! Very happy with the website I bought.</p>
+                            </div>
+                            <div class="name">
+                                <h3>Tom Anderson, <span>Customer</span></h3>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="text">
+                                <p>Good overall template. I am getting back into coding and had a simple question for the author. They responded within 5 minutes and answered my question. Highly recommend!</p>
+                            </div>
+                            <div class="name">
+                                <h3>Jessica Parker, <span>App Developer</span></h3>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="text">
+                                <p>I can't believe I got support and my problem resolved in just minutes from posting my question. Simply amazing team and amazing theme! Thank you for all!</p>
+                            </div>
+                            <div class="name">
+                                <h3>MacLaren, <span>Freelancer</span></h3>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="direct">
+                        <a class="prev_button" href="#"><i class="icon-left"></i></a>
+                        <a class="next_button" href="#"><i class="icon-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <span class="border"><span class="in moving_effect" data-direction="x" data-reverse="yes"></span></span>
+            <span class="square moving_effect" data-direction="y" data-reverse="yes"></span>
+            <span class="quote moving_effect" data-direction="x"><i class="icon-quote-left"></i></span>
+        </div>
+    </div> -->
+    <!-- /TESTIMONIALS -->
+
+       <!-- COUNTER -->
+    <div class="aali_tm_section">
+        <div class="aali_tm_counter">
+            <div class="container">
+                <div class="counter_list">
+                    <ul class="wow fadeIn" data-wow-duration="1s">
+                        <li>
+                            <div class="list_inner">
+                                <div class="wrapper">
+                                    <!-- <div class="value">
+                                        <span class="abs"><span class="tm_counter" data-from="0" data-to="5" data-speed="1200">0</span><label class="big">K</label></a>
+                                    </div> -->
+                                    <div class="text">
+                                      <!--   <h3>JavaScript<br />Projects</h3> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list_inner">
+                                <div class="wrapper">
+                                    <div class="value">
+                                        <!-- <span class="abs"><span class="tm_counter" data-from="0" data-to="90" data-speed="1200">0</span><label class="small">+</label></span> -->
+                                    </div>
+                                    <div class="text">
+                                       <!--  <h3>Digital<br />Products</h3> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list_inner">
+                                <div class="wrapper">
+                                    <div class="value">
+                                     <!--    <span class="abs"><span class="tm_counter" data-from="0" data-to="300" data-speed="1200">0</span><label class="small">+</label></span> -->
+                                    </div>
+                                    <div class="text">
+                                       <!--  <h3>Happy<br />Clients</h3> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <span class="border moving_effect" data-direction="x"></span>
+        </div>
+    </div>
+    <!-- /COUNTER -->
+    
+    
+    <!-- NEWS -->
+    <div class="aali_tm_section" id="blog">
+        <div class="aali_tm_news">
+            <div class="container">
+                <div class="aali_tm_main_title" data-text-align="center" data-color="dark">
+                    <span>Latest Updates</span>
+                    <h3>From My Blog</h3>
+                    <p>Learn to Code</p>
+                </div>
+                <div class="news_list">
+                    <ul>
+                      {%for blog in Blog%}
+                        <li class="wow fadeInLeft" data-wow-duration="1s">
+                            <div class="list_inner">
+                                <div class="image">
+                                    <img src="{%static "./images/thumbs/42-29.jpg" %}" alt="" />
+                                    <div class="main" data-img-url="{{blog.main_coverImage.url}}"></div>
+                                    <a href="#"></a>
+                                </div>
+                                <div class="details">
+                                    <span class="category"><a href="#">{{blog.category}}</a></span>
+                                    <h3 class="title"><a href="#">{{blog.title}}</a></h3>
+                                    <span class="date">Published: {{blog.published}}</span>
+                                </div>
+                                <div class="button">
+                                    <div class="learnmore">
+
+                                        <a href="tutorials/articles/{{blog.category.id}}/blogpost/{{forloop.revcounter}}/">Full Story</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                       <!--  <li class="wow fadeInRight" data-wow-duration="1s">
+                            <div class="list_inner">
+                                <div class="image">
+                                    <img src="img/thumbs/42-29.jpg" alt="" />
+                                    <div class="main" data-img-url="img/news/2.jpg"></div>
+                                    <a class="aali_tm_full_link" href="#"></a>
+                                </div>
+                                <div class="details">
+                                    <span class="category"><a href="#">Development</a></span>
+                                    <h3 class="title"><a href="#">What is mobile app and web design</a></h3>
+                                    <span class="date">October 22, 2021</span>
+                                </div>
+                                <div class="button">
+                                    <div class="aali_tm_learn_more">
+                                        <a href="#">Full Story</a>
+                                    </div>
+                                </div>
+                                <div class="news_hidden_details">
+                                    <div class="news_popup_informations">
+                                        <div class="text">
+                                            <p>Aali is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+                                            <p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+                                            <p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </li>
+
+                        {%endfor%}
+
+                        <li class="wow fadeInLeft" data-wow-duration="1s">
+                            <div class="list_inner">
+                                <div class="button">
+                                    <div class="learnmore readMore">
+                                        <a href="tutorials/">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                      
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /NEWS -->
+
+    <!-- CONTACT -->
+    <div class="aali_tm_section" id="contact">
+        <div class="aali_tm_contact">
+            <div class="container">
+                <div class="aali_tm_main_title" data-text-align="center" data-color="dark">
+                    <span>Want To Connect With Me?</span>
+                    <h3>Send Me An Email</h3>
+                </div>
+                <div class="contact_inner">
+                    <div class="left wow fadeInLeft" data-wow-duration="1s">
+                        <div class="text">
+                            <p>Please fill out the form to send an email directly to me 😀</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="list_inner">
+
+                                    <img class="svg" src="{%static "./images/svg/message.svg" %}" alt="" />
+                                    <span>Email</span>
+                                    <h3><a class="line_anim">{{home.email}}</a></h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right wow fadeInRight" data-wow-duration="1s">
+                        <div class="fields">
+                            <form action="/" method="post" class="contact_form" id="contact_form" autocomplete="off">
+                                <div class="returnmessage" data-success="Your message has been received, I will contact you soon."></div>
+                                <div class="empty_notice"><span>Please Fill Required Fields</span></div>
+                                <div class="input_list">
+                                    <ul>
+                                        <li><input id="name" name="name" type="text" placeholder="Your Name" /></li>
+                                        <li><input id="email" name="email" type="text" placeholder="Your Email" /></li>
+                                    </ul>
+                                </div>
+                                <div class="message_area">
+                                    <textarea id="message" placeholder="Your message here"></textarea>
+                                </div>
+                                <div class="aali_tm_button">
+                                    <a id="send_message" href="#"><span>Submit 
+                                    Message <img class="svg" src=" {%static "./images/svg/send.svg" %}" alt="" /></span></a>
+
+                                </div>
+
+                                <!-- If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  -->
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="square moving_effect" data-direction="y" data-reverse="yes"></span>
+        </div>
+    </div>
+    <!-- /CONTACT -->
+    
+
+<!-- / WRAPPER ALL -->
+{%endfor%}
+
+{% endblock content %}

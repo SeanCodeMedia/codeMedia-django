@@ -1,0 +1,152 @@
+{% extends 'base.html'%}
+
+
+
+{% block content %}
+
+{%include 'snippets/navbar.html'%}
+
+    <!-- MODALBOX -->
+    <div class="aali_tm_modalbox">
+        <div class="box_inner">
+            <div class="close">
+                 {%load static%}
+                <a href="#"><img class="svg" 
+                    src="{%static "./images/svg/cancel.svg" %}"alt="" /></a>
+            </div>
+            <div class="description_wrap"></div>
+        </div>
+    </div>
+    <!-- /MODALBOX -->
+
+<div class="aali_tm_all_wrap top-padding" data-magic-cursor="show"> 
+    <!-- PORTFOLIO -->
+    <div class="aali_tm_section help" id="portfolio">
+        <div class="aali_tm_portfolio wow fadeInUp" data-wow-duration="1s">
+            <div class="container">
+                <div class="aali_tm_main_title" data-text-align="center" data-color="light">
+                    <span>My Personal Projects</span>
+                    <h3>Check them out</h3>
+                </div>
+                <div class="portfolio_filter">
+                </div>
+                <div class="portfolio_list">
+                    <ul class="gallery_zoom">
+                        {%for Project in project %}
+                        <li class="detail">
+                            <div class="list_inner">
+                                <div class="image">
+                                    {%load static%}
+                                    <img src="{%static "./images/thumbs/1-1.jpg" %}" alt="" />
+                                    <div class="main" data-img-url="{{Project.Icon.url}}"></div>
+                                </div>
+                                <div class="overlay"></div>
+                                 {%load static%}
+                                <img class="svg" 
+                                src="{%static "./images/svg/text.svg" %}" alt="" />
+                                <div class="details">
+                                    <span>Detail</span>
+                                    <h3>{{ Project.title }}</h3>
+                                </div>
+                                <a class="aali_tm_full_link portfolio_popup" href="#"></a>
+
+                                <div class="hidden_content">
+                                    <div class="popup_details">
+                                        <div class="additional_images">
+                                            <ul>
+                                                <li>
+                                                    <div class="list_inner">
+                                                        <div class="my_image">
+
+                                                            <img src= 
+                                                            "{%static "./images/thumbs/4-2.jpg" %}" alt="" />
+
+                                                            <div class="main
+                                                            " data-img-url="{{Project.project_photo1.url}}"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        <div class="main_details">
+                                            <div class="textbox">
+                                                {{Project.description|safe}}
+                                            </div>
+                                            <div class="detailbox">
+                                                <ul>
+                                                    <li>
+                                                        <span class="first">Client</span>
+                                                        <span>Alvaro Morata</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="first">Category</span>
+                                                        <span><a href="#">Detail</a></span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="first">Date</span>
+                                                        <span>March 07, 2021</span>
+                                                    </li>
+                                                    <li>
+                                                        <span class="first">Share</span>
+                                                        <ul class="share">
+                                                            <li><a href="#">
+                                                                <img class="svg" src="{%static "./images/svg/social/facebook.svg" %}" alt="" /></a></li>
+                                                            <li><a href="#"><img class="svg" src="{%static "./images/svg/social/twitter.svg" %}" alt="" /></a></li>
+                                                            <li><a href="#"><img class="svg" src="{%static "./images/svg/social/instagram.svg" %}" alt="" /></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="additional_images">
+                                            <ul>
+                                                <li>
+                                                    <div class="list_inner">
+                                                        <div class="my_image">
+                                                            <img src= 
+                                                            "{%static "./images/thumbs/4-2.jpg" %}" alt="" />
+                                                            <div class="main
+                                                            " data-img-url="{{Project.project_photo2.url}}"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list_inner">
+                                                        <div class="my_image">
+                                                             <img src= 
+                                                            "{%static "./images/thumbs/4-2.jpg" %}" alt="" />
+                                                            <div class="main
+                                                            " data-img-url="{{Project.project_photo3.url}}"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list_inner">
+                                                        <div class="my_image">
+                                                                  <img src= 
+                                                            "{%static "./images/thumbs/4-2.jpg" %}" alt="" />
+                                                            <div class="main
+                                                            " data-img-url=
+                                                            "{{Project.project_photo4.url}}"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {%endfor%}
+                        </li>
+                      </li>  
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- /PORTFOLIO -->
+    
+
+{%endblock content%} 

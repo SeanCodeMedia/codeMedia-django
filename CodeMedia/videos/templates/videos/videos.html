@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{% block content %}
+{%include 'snippets/navbar.html'%}
+{%load static%}
+<script type="text/javascript" src="{%static "./js/youtube.js" %}"></script>
+<script type="text/javascript">
+	  var PageVideo = new YouTubeLayout("videos"); 
+</script>
+    <!-- MODALBOX -->
+    <div class="aali_tm_modalbox">
+        <div class="box_inner">
+            <div class="close">
+                 {%load static%}
+                <a href="#"><img class="svg" 
+                    src="{%static "./images/svg/cancel.svg" %}"alt="" /></a>
+            </div>
+            <div class="description_wrap"></div>
+        </div>
+    </div>
+    <!-- /MODALBOX -->
+<div class="aali_tm_all_wrap " data-magic-cursor="show"> 
+
+        <!-- /videos -->
+    <div class="aali_tm_section" id="service">
+        <div class="aali_tm_service">
+            <div class="container">
+                <div class="service_list">
+                    <ul id="youtube_section"> 
+                  
+                    </ul>
+                </div>
+            </div>
+            <span class="square_left moving_effect" data-direction="y" data-reverse="yes"></span>
+            <span class="square_right moving_effect" data-direction="y" data-reverse="yes"></span>
+        </div>
+    </div>
+    <!-- /videos -->
+ </div> 
+{% endblock content %}

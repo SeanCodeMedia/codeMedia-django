@@ -1,0 +1,78 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{%include 'snippets/navbar.html'%}
+
+<style type="text/css">
+/*	.card-img-top{
+
+		width:80% !important; 
+		margin-top:1em !important;
+	}
+
+	.col-sm{
+		max-width:30% !important;
+	}
+
+*/
+</style>
+<!-- 
+<div class="container" >
+	<div class="row">
+	{%for category in Category %}
+		<div class="col col-padding">
+			<div class="card" style="width: 18rem;">
+				<center><img class="card-img-top" width="286" height="214" src="{{category.coverImage.url}}" alt="Card image cap"></center>
+				<div class="card-body">
+					<h5 class="card-title">{{ category.title }}</h5>
+					<p class="card-text">{{ category.overview}}</p>
+					<a href="/tutorials/articles/{{forloop.counter}}/" class="btn btn-primary">Start Reading</a>
+				</div>
+			</div>
+		</div>
+	 {%endfor%}
+	</div>
+</div>
+ -->
+<div class="aali_tm_all_wrap top-padding" data-magic-cursor="show" > 
+
+<!-- Blog -->
+
+    <div class="aali_tm_section help" id="portfolio">
+        <div class="aali_tm_portfolio wow fadeInUp" data-wow-duration="1s">
+            <div class="container">
+
+                <div class="portfolio_list">
+                    <ul class="gallery_zoom">
+                        {%for category in Category %}
+                        <li class="detail">
+                            <div class="list_inner">
+                                <div class="image">
+                                    {%load static%}
+                                    <img src="{%static "./images/thumbs/1-1.jpg" %}" alt="" />
+                                    <div class="main" data-img-url="{{category.coverImage.url}}"></div>
+                                </div>
+                                <div class="overlay"></div>
+                                 {%load static%}
+                                <img class="svg" 
+                                src="{%static "./images/svg/text.svg" %}" alt="" />
+                                <div class="details">
+                                    <span>Tutorials on</span>
+                                    <h3>{{ category.title }}</h3>
+                                </div>
+                                <a class="aali_tm_full_link" href="/tutorials/articles/{{forloop.counter}}"></a>
+                            </div>
+                        </li>
+                        {%endfor%}
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog -->
+</div>
+
+{%endblock content%} 
