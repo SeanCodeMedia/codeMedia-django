@@ -38,6 +38,8 @@ ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,sean
 
 DEVELOPMENT_MODE = os.environ.get("DEVELOPMENT_MODE", "False") == "True"
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 import mimetypes
 mimetypes.add_type("application/javascript", ".js", True)
 mimetypes.add_type("text/css", ".css", True)
@@ -71,6 +73,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -164,7 +167,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # START
 CKEDITOR_UPLOAD_PATH = 'uploads/'
-MEDIA_URL = '/src/media/' 
+MEDIA_URL = '/media/' 
 MEDIA_ROOT =  os.path.join(BASE_DIR,'media')
 
 # END
