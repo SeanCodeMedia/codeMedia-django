@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from django.core.management.utils import get_random_secret_key
 from pathlib import Path
-
+import django_heroku
 #EMAIL 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'boxingstudiogames237@gmail.com'
@@ -200,3 +200,5 @@ CKEDITOR_CONFIGS = {
 
    },
 }
+
+django_heroku.settings(locals())
