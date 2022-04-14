@@ -38,10 +38,10 @@ ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,sean
 
 DEVELOPMENT_MODE = os.environ.get("DEVELOPMENT_MODE", "False") == "True"
 
-# import mimetypes
-# mimetypes.add_type("application/javascript", ".js", True)
-# mimetypes.add_type("text/css", ".css", True)
-# mimetypes.add_type("text/html",".html", True)
+import mimetypes
+mimetypes.add_type("application/javascript", ".js", True)
+mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("text/html",".html", True)
 # Application definition
 
 INSTALLED_APPS = [
