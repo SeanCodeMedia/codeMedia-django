@@ -29,8 +29,8 @@ jQuery(document).ready(function(){
 	aali_tm_owl_carousel();
 	aali_tm_about_animation();
 	aali_tm_moving_animation();
-	aali_tm_down();
-	aali_tm_totop();
+	//aali_tm_down();
+	//aali_tm_totop();
 	
 	jQuery(window).load('body', function(){
 		aali_tm_my_load();
@@ -103,7 +103,7 @@ function aali_tm_nav_bg(){
 // -------------------  ANCHOR --------------------
 // ------------------------------------------------
 
-jQuery('.anchor_nav').onePageNav();
+// jQuery('.anchor_nav').onePageNav();
 
 // -----------------------------------------------------
 // ---------------   TRIGGER MENU    -------------------
@@ -157,6 +157,17 @@ function aali_tm_hero_image(){
 	wrapper.on('mouseleave',function(){
 		jQuery('.aali_tm_hero .right .image .main').css({backgroundImage:'url('+FixedImage+')'});
 	});
+}
+// -------------------------------------------------
+// -------------  adblocker POPUP  -------------------
+// -------------------------------------------------
+
+function aali_tm_adblocker_popup(){
+	
+	"use strict";
+	var modalBox		= jQuery('.aali_tm_modalbox');
+	modalBox.addClass('opened');
+
 }
 
 // -------------------------------------------------
@@ -495,7 +506,7 @@ function aali_tm_contact_form(){
 		}
 		else{
 			// Returns successful data submission message when the entered information is stored in database.
-			jQuery.post("modal/contact.php",{ ajax_name: name, ajax_email: email, ajax_message:message, ajax_subject: subject}, function(data) {
+			jQuery.post("/contact/",{ ajax_name: name, ajax_email: email, ajax_message:message, ajax_subject: subject}, function(data) {
 				
 				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
 				
@@ -547,7 +558,7 @@ function aali_tm_jarallax(){
 // --------------------    WOW JS    -------------------
 // -----------------------------------------------------
 
- new WOW().init();
+ // new WOW().init();
 
 // -----------------------------------------------------
 // ----------------    OWL CAROUSEL    -----------------
@@ -684,7 +695,6 @@ function aali_tm_moving_animation(){
 // -----------------    TILT    ------------------------
 // -----------------------------------------------------
 
-
 function tiltEffect() {
 
 jQuery('.tilt-effect').tilt({
@@ -696,13 +706,12 @@ jQuery('.tilt-effect').tilt({
 
 }
 
-
-jQuery('.tilt-effect').tilt({
-    maxTilt: 6,
-	easing: "cubic-bezier(.03,.98,.52,.99)",
-	speed: 500,
-	transition: true
-})
+// jQuery('.tilt-effect').tilt({
+//     maxTilt: 6,
+// 	easing: "cubic-bezier(.03,.98,.52,.99)",
+// 	speed: 500,
+// 	transition: true
+// })
 
 // -----------------------------------------------------
 // -----------------    DOWN    ------------------------
@@ -733,9 +742,12 @@ function aali_tm_down(){
 function aali_tm_totop(){
   
   "use strict";
+
+  console.log("HELLOOOOO")
   
   jQuery(".totop").on('click', function(e) {
-    e.preventDefault();    
+       
+     console.log("HELLOOOOO")
     jQuery("html, body").animate({ scrollTop: 0 }, 'slow');
     return false;
   });

@@ -13,11 +13,29 @@ import os
 from django.core.management.utils import get_random_secret_key
 from pathlib import Path
 #EMAIL 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'boxingstudiogames237@gmail.com'
-EMAIL_HOST_PASSWORD = 'Rosezaten5000$'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+#EMAIL_HOST = str(os.environ.get('EMAIL_HOST'))
+# EMAIL_HOST_USER = str(os.environ.get('EMAIL_HOST_USER'))
+# EMAIL_HOST_PASSWORD = str(os.environ.get('EMAIL_HOST_PASSWORD'))
+# EMAIL_PORT = int(os.environ.get('EMAIL_PORT'))
+# EMAIL_USE_TLS = True
+
+
+EMAIL_HOST            = 'smtp.gmail.com'
+EMAIL_USER_HOST       = 'boxingstudiogames237@gmail.com'
+EMAIL_HOST_PASSWORD   = 'Rosezaten5000$'
+EMAIL_PORT            = 587 
+EMAIL_USE_TLS         = True
+
+
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID") 
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_ENDPOINT_URL = os.environ.get("AWS_S3_ENDPOINT_URL")
+# I enabled the CDN, so you get a custom domain. Use the end point in the AWS_S3_CUSTOM_DOMAIN setting. 
+AWS_S3_CUSTOM_DOMAIN = os.environ.get("AWS_S3_CUSTOM_DOMAIN") # check this but to add custom CDN URLs
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -65,6 +83,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 
 ]
 
@@ -146,7 +165,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
@@ -163,8 +182,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # START
 CKEDITOR_UPLOAD_PATH = 'uploads/'
-MEDIA_URL = '/media/' 
+# MEDIA_URL = '/media/' 
 MEDIA_ROOT =  os.path.join(BASE_DIR,'media')
+
+ # uncomment if you want to host static files from spaces 
+ # https://www.digitalocean.com/community/questions/how-to-store-django-media-files-to-spaces
+# AWS_STATIC_LOCATION = 'static'
+# STATIC_URL = '%s/static%s' % (AWS_S3_ENDPOINT_URL, AWS_STATIC_LOCATION)
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+MEDIA_URL = '{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, 'media')
+MEDIA_ROOT = 'media/'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+AWS_DEFAULT_ACL = 'public-read'
 
 # END
 

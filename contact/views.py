@@ -12,8 +12,8 @@ def send_email(email, message, name):
 		send_mail(
 			'New Contact',
 		     "Message from Contact: " + " Name: "+name +" EMail: " + email +" Message: "+ message,
-		    'codeMedia32@yahoo.com',
-		    ['codeMedia32@gmail.com'],
+		    'boxingstudiogames237@gmail.com',
+		    ['codeMedia32@gmail.com','seanDp32@gmail.com'],
 		    fail_silently=False,
 		    )
 	except Exception as e:
