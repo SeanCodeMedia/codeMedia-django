@@ -177,8 +177,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # START
 CKEDITOR_UPLOAD_PATH = 'uploads/'
@@ -188,8 +188,8 @@ MEDIA_ROOT =  os.path.join(BASE_DIR,'media')
  # uncomment if you want to host static files from spaces 
  # https://www.digitalocean.com/community/questions/how-to-store-django-media-files-to-spaces
 # AWS_STATIC_LOCATION = 'static'
-# STATIC_URL = '%s/static%s' % (AWS_S3_ENDPOINT_URL, AWS_STATIC_LOCATION)
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATIC_URL = '%s/static%s' % (AWS_S3_ENDPOINT_URL, AWS_STATIC_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 MEDIA_URL = '{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, 'media')
