@@ -187,9 +187,10 @@ MEDIA_ROOT =  os.path.join(BASE_DIR,'media')
 
  # uncomment if you want to host static files from spaces 
  # https://www.digitalocean.com/community/questions/how-to-store-django-media-files-to-spaces
-# AWS_STATIC_LOCATION = 'static'
-STATIC_URL = '%s/static%s' % (AWS_S3_ENDPOINT_URL, AWS_STATIC_LOCATION)
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+STATIC_URL = '{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, 'static')
+STATIC_ROOT = 'static/'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 
 MEDIA_URL = '{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, 'media')
