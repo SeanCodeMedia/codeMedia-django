@@ -197,7 +197,7 @@ MEDIA_URL = '{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, 'media')
 MEDIA_ROOT = 'media/'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 AWS_DEFAULT_ACL = 'public-read'
-
+DISABLE_COLLECTSTATIC=1
 # END
 
 # ckeditor 
