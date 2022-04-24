@@ -12,6 +12,7 @@ def download_resume(request):
 	_file_name = Home.objects.all()[0].file_name
 	path = "uploads/home/resume/"+_file_name
 	file_path = os.path.join(settings.MEDIA_ROOT, path)
+	print(file_path)
 	if os.path.exists(file_path):
 		with open(file_path, 'rb') as fh:
 		    response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
