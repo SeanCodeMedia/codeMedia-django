@@ -5,21 +5,21 @@ from SeanCodeMedia                   import  settings
 from portfolio.models 				 import Project
 from .models 						 import  Home
 from django.http 					 import HttpResponse
+from django.http 					 import Http404
 # Create your views here.
 
 
 def download_resume(request):
 	_file_name = Home.objects.all()[0].file_name
 	path = "uploads/home/resume/"+_file_name
-	file_path = os.path.join(settings.MEDIA_ROOT, path)
+	file_path = os.path.join(settings.MEDIA_URL, path)
 	print(file_path)
 	if os.path.exists(file_path):
 		with open(file_path, 'rb') as fh:
 		    response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
 		    response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
 		    return response
-	raise Http404
-
+	raise Http404("sorry not found")
 
 def index(request):
 	# optimize this uisng a array
