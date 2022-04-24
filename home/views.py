@@ -7,12 +7,38 @@ from .models 						 import  Home
 from django.http 					 import HttpResponse
 from django.http 					 import Http404
 # Create your views here.
+import boto3
+import botocore
 
+session = boto3.session.Session()
+client = session.client(
+    's3',
+    region_name='nyc3',
+    endpoint_url=settings.AWS_S3_ENDPOINT_URL,
+    aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
+    aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
+)
 
 def download_resume(request):
-	_file_name = Home.objects.all()[0].file_name
-	path = "uploads/home/resume/"+_file_name
-	file_path = os.path.join(settings.MEDIA_URL, path)
+	#_file_name = Home.objects.all()[0].file_name
+	#path = "uploads/home/resume/"+_file_name
+	print("RUNNNING")
+	path = "Resume/Sean Peart Resume.pdf"
+	# try:
+	# 	client.download_file(Bucket=settings.AWS_STORAGE_BUCKET_NAME,
+	# 						 Key='Resume.pdf',
+	# 						 Filename='/media/uploads/home/resume/Resume.pdf',)
+
+
+	# except botocore.exceptions.ClientError as e:
+	# 	if e.response['Error']['Code'] == "404":
+	# 		print("The object does not exist.")
+	# 		Http404("sorry not found")
+	# 	else:
+	# 		Http404("sorry not found")
+
+	file_path = os.path.join(settings.STATIC_ROOT, path)
+	# file_path = "https://seancodemediadjango.sfo3.digitaloceanspaces.com/media/uploads/home/resume/Resume.pdf"
 	print(file_path)
 	if os.path.exists(file_path):
 		with open(file_path, 'rb') as fh:

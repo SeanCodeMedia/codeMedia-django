@@ -13,18 +13,18 @@ import os
 from django.core.management.utils import get_random_secret_key
 from pathlib import Path
 #EMAIL 
-#EMAIL_HOST = str(os.environ.get('EMAIL_HOST'))
-# EMAIL_HOST_USER = str(os.environ.get('EMAIL_HOST_USER'))
-# EMAIL_HOST_PASSWORD = str(os.environ.get('EMAIL_HOST_PASSWORD'))
-# EMAIL_PORT = int(os.environ.get('EMAIL_PORT'))
-# EMAIL_USE_TLS = True
+EMAIL_HOST = str(os.environ.get('EMAIL_HOST'))
+EMAIL_HOST_USER = str(os.environ.get('EMAIL_HOST_USER'))
+EMAIL_HOST_PASSWORD = str(os.environ.get('EMAIL_HOST_PASSWORD'))
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_USE_TLS = True
 
 
-EMAIL_HOST            = 'smtp.gmail.com'
-EMAIL_USER_HOST       = 'boxingstudiogames237@gmail.com'
-EMAIL_HOST_PASSWORD   = 'Rosezaten5000$'
-EMAIL_PORT            = 587 
-EMAIL_USE_TLS         = True
+# EMAIL_HOST            = 'smtp.gmail.com'
+# EMAIL_USER_HOST       = 'boxingstudiogames237@gmail.com'
+# EMAIL_HOST_PASSWORD   = 'Rosezaten5000$'
+# EMAIL_PORT            = 587 
+# EMAIL_USE_TLS         = True
 
 
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID") 
@@ -191,8 +191,8 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 # STATIC_URL = '{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, 'static')
 # STATIC_ROOT = 'static/'
 # STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-
-
+MEDIA_URL_DOWNLOAD = 'https://'+'{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, 'media')
+print(MEDIA_URL_DOWNLOAD)
 MEDIA_URL = '{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, 'media')
 MEDIA_ROOT = 'media/'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
