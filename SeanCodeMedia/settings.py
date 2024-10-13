@@ -279,7 +279,7 @@ print("WARNING - DEBUG  TEST  " + str(DEBUG))
 
 ALLOWED_HOSTS = ['*'] 
 
-DEVELOPMENT_MODE = os.environ.get("DEVELOPMENT_MODE", "False") == "True"
+# DEVELOPMENT_MODE = os.environ.get("DEVELOPMENT_MODE", "False") == "True"
 
 import mimetypes
 mimetypes.add_type("application/javascript", ".js", True)
