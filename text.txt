@@ -30,3 +30,21 @@ sqlparse==0.4.1
 typing-extensions==4.1.1
 urllib3==1.26.9
 whitenoise==6.0.0
+
+
+web: gunicorn SeanCodeMedia.wsgi:application --log-file -
+
+gunicorn --worker-tmp-dir /dev/shm
+
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID") 
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_ENDPOINT_URL = os.environ.get("AWS_S3_ENDPOINT_URL")
+# I enabled the CDN, so you get a custom domain. Use the end point in the AWS_S3_CUSTOM_DOMAIN setting. 
+AWS_S3_CUSTOM_DOMAIN = os.environ.get("AWS_S3_CUSTOM_DOMAIN") # check this but to add custom CDN URLs 
+
+
+dop_v1_3957071bb7e93ea4416e3d1120cdc2bdb1d223d3b5a7bf05b50c395a9ecf6587
+
+
+gunicorn --worker-tmp-dir /dev/shm --timeout 120 --workers 3 --worker-class sync --log-level debug SeanCodeMedia.wsgi:application
