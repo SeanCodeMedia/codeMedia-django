@@ -105,7 +105,9 @@ celerybeat.pid
 .env
 .venv
 env/
+lenv/
 venv/
+requirements-2.txt
 SSH files/
 ENV/
 env.bak/
