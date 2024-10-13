@@ -182,8 +182,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # START
 CKEDITOR_UPLOAD_PATH = 'uploads/'
-# MEDIA_URL = '/media/' 
-# MEDIA_ROOT =  os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/' 
+#MEDIA_ROOT =  os.path.join(BASE_DIR,'media')
 
  # uncomment if you want to host static files from spaces 
  # https://www.digitalocean.com/community/questions/how-to-store-django-media-files-to-spaces
