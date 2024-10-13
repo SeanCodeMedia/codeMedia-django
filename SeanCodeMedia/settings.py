@@ -245,6 +245,9 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_USE_TLS = True
 
+# DISABLE OF HOURKU
+DISABLE_COLLECTSTATIC=1
+
 # AWS (DigitalOcean Spaces) Configuration
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID") 
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
@@ -402,4 +405,3 @@ MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 AWS_DEFAULT_ACL = 'public-read'
 
 # Remove DISABLE_COLLECTSTATIC unless it's intentionally set for deployment platforms 
-DISABLE_COLLECTSTATIC=1
