@@ -47,11 +47,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", get_random_secret_key())
-
+#https://sean-code-media-kwtg2.ondigitalocean.app/
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str(os.environ.get("DEBUG")) == "1"
-print("WARING - DEBUG " + str(DEBUG))
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,seancodemedia-django-app-dwjik.ondigitalocean.app,seancodemedia.com").split(",")
+print("WARING - DEBUG " + str(DEBUG))   
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,seancodemedia-django-app-dwjik.ondigitalocean.app,seancodemedia.com,sean-code-media-kwtg2.ondigitalocean.app").split(",")
 
 DEVELOPMENT_MODE = os.environ.get("DEVELOPMENT_MODE", "False") == "True"
 
