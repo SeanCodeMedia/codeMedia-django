@@ -401,5 +401,5 @@ MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 # Ensure AWS_DEFAULT_ACL is set
 AWS_DEFAULT_ACL = 'public-read'
 
-# Remove DISABLE_COLLECTSTATIC unless it's intentionally set for deployment platforms
-# DISABLE_COLLECTSTATIC=1
+# Remove DISABLE_COLLECTSTATIC unless it's intentionally set for deployment platforms 
+DISABLE_COLLECTSTATIC=1
