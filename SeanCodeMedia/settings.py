@@ -262,10 +262,18 @@ AWS_S3_OBJECT_PARAMETERS = {
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", get_random_secret_key())
-DEBUG = str(os.environ.get("DEBUG")) == "0"
 
-print("WARNING - DEBUG  TEST" + str(DEBUG))   
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+if not SECRET_KEY:
+    raise ValueError(
+        "The SECRET_KEY environment variable is not set. "
+        "Please set DJANGO_SECRET_KEY to a secure value."
+    )
+
+
+DEBUG = os.environ.get("DEBUG", "False").lower() in ["true", "1", "t", "yes"]
+
+print("WARNING - DEBUG  TEST  " + str(DEBUG))   
 
 # ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,seancodemedia-django-app-dwjik.ondigitalocean.app,seancodemedia.com,sean-code-media-kwtg2.ondigitalocean.app").split(",")
 
