@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import  Category
 from .models import  BlogPost
-from SeanCodeMedia.settings import MEDIA_ROOT, MEDIA_URL
+from SeanCodeMedia.settings import MEDIA_URL
 # Create your views here.
 
 def show_tutorials(request):
@@ -9,7 +9,7 @@ def show_tutorials(request):
 	context={
 
 	"Category": Category.objects.all(),
-	'media_root': MEDIA_ROOT.replace("/media",""), 
+	#'media_root': MEDIA_ROOT.replace("/media",""), 
 	'media_url': MEDIA_URL
 
 	}
