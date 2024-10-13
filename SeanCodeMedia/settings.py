@@ -267,7 +267,9 @@ DEBUG = str(os.environ.get("DEBUG")) == "1"
 
 print("WARNING - DEBUG " + str(DEBUG))   
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,seancodemedia-django-app-dwjik.ondigitalocean.app,seancodemedia.com,sean-code-media-kwtg2.ondigitalocean.app").split(",")
+# ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,seancodemedia-django-app-dwjik.ondigitalocean.app,seancodemedia.com,sean-code-media-kwtg2.ondigitalocean.app").split(",")
+
+ALLOWED_HOSTS = ['*'] 
 
 DEVELOPMENT_MODE = os.environ.get("DEVELOPMENT_MODE", "False") == "True"
 
